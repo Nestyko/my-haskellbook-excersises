@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: aaf088b74a465327187565b647d444873387f53e873274e2adda8817686e3744
+-- hash: 48f543780e2eb0f4a29fef223b500e141bbf77e7a98944cb590f006e88c28bb6
 
 name:           haskell-book
 version:        0.1.0.0
@@ -27,6 +27,7 @@ source-repository head
 
 library
   exposed-modules:
+      AlgebraicDatatypes
       Arith4
       CasePractice
       Chapter2
