@@ -1,3 +1,5 @@
+module CasePractice where
+
 functionC :: Ord p => p -> p -> p
 functionC x y = if (x > y) then x else y
 
