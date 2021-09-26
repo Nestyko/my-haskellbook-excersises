@@ -5,7 +5,7 @@ fibonnaci 0 = 0
 fibonnaci 1 = 1
 fibonnaci x = fibonnaci (x - 1) + fibonnaci (x - 2)
 
-data DividedResult = Result (Integer, Integer) | DividedByZero deriving (Show)
+data DividedResult = Result (Integer, Integer) | DividedByZero deriving (Show, Eq)
 
 dividedBy :: Integer -> Integer -> DividedResult
 dividedBy _ 0 = DividedByZero
