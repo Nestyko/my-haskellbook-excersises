@@ -1,0 +1,61 @@
+name:                morse-game
+version:             0.1.0.0
+github:              "nestyko/morse-game"
+license:             BSD3
+author:              "Nestor Tobon"
+maintainer:          "nltobon@gmail.com"
+copyright:           "MIT"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            Web
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description:         Please see the README on GitHub at <https://github.com/nestyko/morse-game#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+- containers
+- QuickCheck
+
+ghc-options:
+- -Wall 
+- -fno-warn-orphans
+- -threaded
+- -rtsopts
+- -with-rtsopts=-N
+
+library:
+  source-dirs: src
+
+executables:
+  morse-game-exe:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -Wall 
+    - -fno-warn-orphans
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - morse-game
+
+tests:
+  morse-game-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -Wall 
+    - -fno-warn-orphans
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - morse-game
